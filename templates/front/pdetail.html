@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h5 class="card-header">{{object.title}}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{object.content}}</h5>
+            <p><img src="{{object.picture.url}}" download="output" width="50%" height="50%" class="50"></p>
+            <input type="button" value="拡大する" onclick="f5(10);"/>
+            <input type="button" value="縮小する" onclick="f5(-10);"/><br>
+            <h5 class="card-title">{{object.postdate|date:"Y/n/j"}}</h5>
+            <a href="{% url 'plist' %}" class="btn btn-primary">戻る</a>
+        </div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    function f5(plus){
+        let element=document.querySelector('img');
+        let num=parseInt(element.className);
+        num+=plus;
+        if(num<=10){
+            num=10;
+        }else if(num>=100){
+            num=100;
+        }
+        element.className=num.toString();
+        element.style.width=num.toString()+'%';
+    }
+</script>
+{% endblock content %}

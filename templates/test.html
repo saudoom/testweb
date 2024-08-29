@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img src="C:\Users\81907\pictures\画像1.png" width="10%" height="10%" class="10">
+        <input type="button" value="Increase" onclick="f5(10);"/>
+        <input type="button" value="Decrease" onclick="f5(-10);"/>
+        <script language="javascript" type="text/javascript">
+            function f1(plus){
+                let element=document.querySelector('img');
+                var num=parseInt(element.style.width);
+                num=num.replace('%','');
+                
+                if(num==100){
+                }else if(num==10){
+                }else{
+                    num=num+plus;
+                }
+                var result=num.toString();
+                result=result+'%'
+                element.style.width=result;
+                element.style.height=result;	
+            }
+            function f2(){
+                let element=document.querySelector('img');
+                element.style.width="100%";
+            }
+            function f3(){
+                let element=document.querySelector('img');
+                var num=parseInt(element.className);
+                num+=10;
+                element.className=num.toString();
+                element.style.width=num.toString()+'%';
+            }
+            function f4(plus){
+                let element=document.querySelector('img');
+                let num=parseInt(element.className);
+                num+=plus;
+                element.className=num.toString();
+                element.style.width=num.toString()+'%';
+            }
+            function f5(plus){
+                let element=document.querySelector('img');
+                let num=parseInt(element.className);
+                num+=plus;
+                if(num<=10){
+                    num=10;
+                }else if(num>=100){
+                    num=100;
+                }
+                element.className=num.toString();
+                element.style.width=num.toString()+'%';
+            }
+
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+    {{form.as_p}}
+    
+    <input type="submit" value="更新">
+    
+</form>
+<br>
+<a href="{% url 'plist' %}" class="btn btn-primary">変更しない</a>
+{% endblock content %}
