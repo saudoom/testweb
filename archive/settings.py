@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'archive.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'django_db',
-        'USER': 'db_kawada',
-        'PASSWORD': '0823Pei',
+        #'NAME': 'django_db',
+        #'USER': 'db_kawada',
+        #'PASSWORD': '0823Pei',
         
     }
 }
