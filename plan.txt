@@ -1,5 +1,5 @@
 大達成系のモデル構造{
-    タイトル
+    タイトル there are 10 types of peoeple in the world
     トップ写真
     本文
     付加写真
